@@ -3,12 +3,13 @@ import torchvision.transforms as transforms
 import torch
 import numpy as np
 from scipy.io import loadmat
-#Dataset created using .mat file created using dataset_create.py
+
+# Dataset is created using .mat file which is created using dataset_create.py
 class SVHNDataset(Dataset):
    
-    def __init__(self, mat_file,transform=None):
+    def __init__(self, mat_file, transform=None):
        self.data={}
-       self.data['X'],self.data['y'] = loadmat(mat_file)['X'],loadmat(mat_file)['y']
+       self.data['X'], self.data['y'] = loadmat(mat_file)['X'], loadmat(mat_file)['y']
        
        self.transform = transform
       

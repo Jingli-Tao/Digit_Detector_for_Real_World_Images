@@ -1,9 +1,9 @@
 import h5py
-import optparse
+# import optparse
 
 from tqdm import tqdm
 
-# The DigitStructFile is just a wrapper around the h5py data.  It basically references 
+# The DigitStructFile is just a wrapper around the h5py data. It basically references 
 #    inf:              The input h5 matlab file
 #    digitStructName   The h5 ref to all the file names
 #    digitStructBbox   The h5 ref to all struc data
@@ -13,8 +13,8 @@ class DigitStructFile:
         self.digitStructName = self.inf['digitStruct']['name']
         self.digitStructBbox = self.inf['digitStruct']['bbox']
 
-# getName returns the 'name' string for for the n(th) digitStruct. 
-    def getName(self,n):
+# getName returns the 'name' string for the n(th) digitStruct. 
+    def getName(self, n):
         return ''.join([chr(c[0]) for c in self.inf[self.digitStructName[n][0]].value])
 
 # bboxHelper handles the coding difference when there is exactly one bbox or an array of bbox. 
