@@ -17,7 +17,7 @@ conda env create -f digit_detector.yml
 ```
 ## Getting Started
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Donwload raw images (train.tar.gz, test.tar.gz, train_32x32.mat, and test_32x32.mat) from http://ufldl.stanford.edu/housenumbers/. Create two folders "./train" and "./test", save training images and test images into thest two folders.
+2. Donwload raw images (train.tar.gz, test.tar.gz, train_32x32.mat, and test_32x32.mat) from http://ufldl.stanford.edu/housenumbers/. 
 3. Process and transform images.
 ```sh
 python data_create.py
